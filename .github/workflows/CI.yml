@@ -38,7 +38,7 @@ jobs:
       - name: Archive Gemfile.lock
         uses: actions/upload-artifact@v3
         with:
-          name: Gemfile.lock
+          name: ${{matrix.ruby}}_Gemfile.lock
           path: Gemfile.lock
       - run: |
           bundle exec rake
