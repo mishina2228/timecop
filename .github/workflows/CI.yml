@@ -32,7 +32,8 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          rubygems: latest
-          bundler-cache: true
+      - run: gem update --system
+        if: ${{ matrix.ruby == '2.5' }}
+      - run: bundle install
       - run: |
           bundle exec rake
