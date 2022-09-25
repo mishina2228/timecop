@@ -7,7 +7,7 @@ group :development do
   gem 'nokogiri'
   gem 'pry'
   gem 'mocha'
-  gem 'activesupport'
+  gem 'activesupport', '>= 4.2'
   gem 'tzinfo'
   gem 'i18n'
   gem 'minitest'
